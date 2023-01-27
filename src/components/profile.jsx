@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "../assets/nwaneri.png";
 
 const ProfileCard = () => {
@@ -8,6 +9,12 @@ const ProfileCard = () => {
   const [state, setState] = useState("");
   const [age, setAge] = useState("");
   const [picture, setPicture] = useState(undefined);
+
+  const navigate = useNavigate();
+
+  const goHome = () => {
+    navigate("/");
+  };
 
   useEffect(() => {
     const data = localStorage.getItem("data");
@@ -20,6 +27,14 @@ const ProfileCard = () => {
     setLName(DATABASE.lastName);
     setPicture(DATABASE.picture);
     setState(DATABASE.state);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("beforeunload", goHome);
+
+    return () => {
+      window.removeEventListener("beforeunload", goHome);
+    };
   }, []);
 
   return (
@@ -50,7 +65,7 @@ const ProfileCard = () => {
                   <span>State:</span> {state}{" "}
                 </p>
                 <p>
-                  <span>Age:</span> {age}{" "}
+                  <span>Age:</span> {age} years{" "}
                 </p>
               </div>
             </div>
