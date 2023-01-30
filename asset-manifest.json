@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/profile-card/static/css/main.e358adf3.css",
+    "main.css": "/profile-card/static/css/main.05700740.css",
     "main.js": "/profile-card/static/js/main.3bc55fd3.js",
     "static/media/nwaneri.png": "/profile-card/static/media/nwaneri.22490502016695c70cd7.png",
     "index.html": "/profile-card/index.html",
-    "main.e358adf3.css.map": "/profile-card/static/css/main.e358adf3.css.map",
+    "main.05700740.css.map": "/profile-card/static/css/main.05700740.css.map",
     "main.3bc55fd3.js.map": "/profile-card/static/js/main.3bc55fd3.js.map"
   },
   "entrypoints": [
-    "static/css/main.e358adf3.css",
+    "static/css/main.05700740.css",
     "static/js/main.3bc55fd3.js"
   ]
 }
